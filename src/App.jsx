@@ -40,7 +40,7 @@ export const App = () => {
 
   const goods = sortingElements(goodsFromServer, sortField, isReversed);
 
-  const handleSort = (field) => {
+  const handleSort = field => {
     if (field === 'reverse') {
       setIsReversed(!isReversed);
     } else {
@@ -93,7 +93,9 @@ export const App = () => {
 
       <ul>
         {goods.map(good => (
-          <li key={good} data-cy="Good">{good}</li>
+          <li key={good} data-cy="Good">
+            {good}
+          </li>
         ))}
       </ul>
     </div>
